@@ -1,0 +1,10 @@
+*
+!.gitignore
+username = emre-cavus
+password = EmreJesPsterCavus3010095563
+
+git config --global user.email "cavus.emre5563@gmail.com"
+git config --global user.name "emre-cavus"
+
+git config --get-all emre-cavus
+git config --get commit.template laravel/Movieflaps

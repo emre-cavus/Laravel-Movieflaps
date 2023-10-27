@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color: #fff;
+  --background: #111823;
+  --background-blur: #1118237c;
+  --footer: #0c1016;
+  --header: #1051b972;
+  --lab: #1D2E49;
+  --lab-blur: #1d2e497a;
+  --tab: #111823;
+  --movies-tab: #2D3C52;
+  --text-tab: #656F7E;
+  --text-color-tab: #656F7E;
+}
+
+body {
+  height: auto;
+  width: auto;
+  background-color: var(--background);
+  /*
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2672824.jpg&f=1&nofb=1&ipt=dc4093a6b2e83c41b3bd4f9048ea749d923f3f46ab53a1950b4ebf949449f2d4&ipo=images');
+  */
+  color: var(--color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+p,
+a,
+span {
+  color: #fff;
+}
+
+.scnd-font-color {
+  color: #9099b7;
+}
+
+.input-container {
+  position: relative;
+}
+
+
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.horizontal-list li {
+  float: left;
+}
+
+/** MAIN CONTAINER **/
+
+.main-container {
+  font-family: 'Ubuntu', sans-serif;
+  width: 711px;
+  margin: 6pt auto;
+}
+
+header {
+  height: 50px;
+}
+
+.header-menu {
+  font-size: 17px;
+  line-height: 80px;
+}
+
+.header-menu li {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  /** To avoid a flash when hover messages **/
+}
+
+.header-menu-tab {
+  padding: 0 35px;
+  display: block;
+  line-height: 3;
+  font-size: 17px;
+}
+
+.header-menu-tab:hover {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  background: #1d2e4977;
+  border-bottom: 1px solid var(--color);
+  text-decoration: none;
+}
+
+.header-menu-tab .icon {
+  padding-right: 15px;
+}
+
+/** CONTAINERS **/
+.container {
+  float: left;
+  width: 300px;
+}
+
+.block {
+  margin-bottom: 25px;
+  background: #39426495;
+  border-radius: 50px;
+}
