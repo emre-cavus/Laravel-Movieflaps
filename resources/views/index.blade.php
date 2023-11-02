@@ -8,7 +8,7 @@ try {
     if(DB::connection()->getPdo()) 
     { 
         echo "Successfully connected to the database => " 
-                      .DB::connection()->getDatabaseName(); 
+                .DB::connection()->getDatabaseName(); 
     } 
 } 
 catch (Exception $e) { 
@@ -70,7 +70,7 @@ catch (Exception $e) {
 
 <!-- DARK MODE BUTTON -->
 <button type="button" name="dark_light" onclick="toggleDarkLight()" class="btn-toggle">Theme</button>
-<button onclick="login()" class="btn-login" id="login">Login</button>
+<button onclick=location.href="login" class="btn-login" id="login">Login</button>
 <!--
 <script src="/js/popup.js"></script>
 -->

@@ -1,10 +1,3 @@
-<?php
-if(DB::connection()->getPdo()) 
-{ 
-    echo "Successfully connected to the database => " 
-                 .DB::connection()->getDatabaseName(); 
-} 
-?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,17 +8,23 @@ if(DB::connection()->getPdo())
   <title>Movieflaps'e Giriş Yap</title>
 </head>
 <body>
+    @if (session()->has('login') && session('login') == 'fail')
+      Login işlemi hatalı
+    @endif
   <img src="/images/favicon.png">
 <div class="login-box">
   <h2>Login</h2>
-  <form>
+  <form  method="POST" action="login">
+    @csrf
     <div class="user-box">
-      <input type="text" name="username" required> 
+      <input type="text" name="username" required="">
+      <span class="invalid-feedback"><?php echo $username_err; ?></span>
       <label>Username</label>
     </div>
     <div class="user-box">
-      <input type="password" name="password" required>
+      <input type="password" name="password" required="">
       <label>Password</label>
+      <span class="invalid-feedback"><?php echo $password_err; ?></span>
     </div>
     <a href="#">
       <span></span>
@@ -37,7 +36,7 @@ if(DB::connection()->getPdo())
   </form>
 </div>
   <div class="sign-up">
-    <a class="sign-up-link" href="Route [{$register}]">Create Account</a>
+    <a class="sign-up-link" href="sign-up">Create Account</a>
   </div>
 </body>
 </html>

@@ -1,9 +1,8 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Main;
 use App\Http\Controllers\Yonet;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +16,7 @@ use App\Http\Controllers\Yonet;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('/login', function () {
     return view('login');
@@ -50,5 +49,11 @@ Route::get('gfg', function () {
 Route::get('/register', function(){
     return views('register');
 });
+/*
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('login', [AuthController::class, 'login'])->name('login');
 
+Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::post('register', [AuthController::class, 'register'])->name('register');
+*/
 //Route::resource('post', 'Controller');

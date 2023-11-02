@@ -36,6 +36,10 @@ body {
   background: linear-gradient(var(--background), var(--movies-tab));
 }
 
+input:-internal-autofill-selected {
+  background-color: #111823 !important;
+}
+
 .sign-up {
   display: block;
   position: absolute;
