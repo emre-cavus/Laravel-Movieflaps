@@ -13,6 +13,7 @@ class AuthController extends Controller
         else if($request->method() == 'POST' ){
             $data = $request->only('email', 'password');
             if (Auth::attempt($data)) {
+                //selmalar ben emre
                 //login success
                 return redirect(route('home'))->width('login', 'success');
             }
