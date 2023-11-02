@@ -14,46 +14,21 @@ use App\Http\Controllers\Yonet;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/admin-login', function () {
-    return view('admin-login');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/iletisim', function () {
-    return view('iletisim');
-});
-
-Route::get('/filmler', function () {
-    return view('filmler');
-});
-
-Route::get('/profil', function () {
-    return view('profil');
-});
-
-Route::get('gfg', function () {
-    return view('gfg');
-});
-
-Route::get('/register', function(){
-    return views('register');
-});
 /*
-Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::post('login', [AuthController::class, 'login'])->name('login');
-
-Route::get('register', [AuthController::class, 'register'])->name('register');
-Route::post('register', [AuthController::class, 'register'])->name('register');
+Route::get('/login', [PageController::class, 'login'])->name('login');
+Route::get('/register', [PageController::class, 'register'])->name('register');
 */
-//Route::resource('post', 'Controller');
+Route::get('/admin-login', [PageController::class, 'admin-login'])->name('admin-login');
+Route::get('/index', [PageController::class, 'index'])->name('index');
+Route::get('/profil', [PageController::class, 'profil'])->name('profil');
+Route::get('/filmler', [PageController::class, 'filmler'])->name('filmler');
+Route::get('/iletisim', [PageController::class, 'iletisim'])->name('iletisim');
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/gfg', [PageController::class, 'gfg'])->name('gfg');
+
+
+Route::get('login', [PageController::class, 'login'])->name('login');
+Route::post('login', [PageController::class, 'login'])->name('login');
+
+Route::get('register', [PageController::class, 'register'])->name('register');
+Route::post('register', [PageController::class, 'register'])->name('register');
