@@ -1,8 +1,9 @@
 <?php
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Main;
-use App\Http\Controllers\Yonet;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,10 +26,12 @@ Route::get('/filmler', [PageController::class, 'filmler'])->name('filmler');
 Route::get('/iletisim', [PageController::class, 'iletisim'])->name('iletisim');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/gfg', [PageController::class, 'gfg'])->name('gfg');
+Route::get('/login', [PageController::class, 'login']);
 
-
+/*
 Route::get('login', [PageController::class, 'login'])->name('login');
 Route::post('login', [PageController::class, 'login'])->name('login');
 
 Route::get('register', [PageController::class, 'register'])->name('register');
 Route::post('register', [PageController::class, 'register'])->name('register');
+*/
