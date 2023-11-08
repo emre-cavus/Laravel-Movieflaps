@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     function index() {
-        return view('/');
+        return view('index');
     }
     function login() {
         return view('login');
