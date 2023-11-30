@@ -31,13 +31,12 @@
 
         <label>Password</label>
       </div>
-      <a href="/">
+      <input type="submit" class="effect">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Submit
-      </a>
+    </input>
     </form>
   </div>
     <div class="sign-up">

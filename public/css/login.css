@@ -34,11 +34,25 @@ p {
 
 }
 
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: linear-gradient(var(--background), var(--movies-tab));
+  background: -moz-linear-gradient(var(--background), var(--movies-tab));
+  background: -webkit-gradient(var(--background), var(--movies-tab));
+  background: -webkit-linear-gradient(var(--background), var(--movies-tab));
+  background: -o-linear-gradient(var(--background), var(--movies-tab));
+  background: -ms-linear-gradient(var(--background), var(--movies-tab));
+  background: linear-gradient(var(--background), var(--movies-tab));
+
 }
 
 input:-internal-autofill-selected {
@@ -116,7 +130,12 @@ input:-internal-autofill-selected {
   font-size: 12px;
 }
 
-.login-box form a {
+.login-box form input[type='submit'] {
+
+  background: transparent;
+  border: 1px solid #0394f4;
+  border-radius: 10px;
+  cursor: pointer;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -125,27 +144,28 @@ input:-internal-autofill-selected {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
+  transition: .3s;
   margin-top: 40px;
   letter-spacing: 4px
 }
 
-.login-box a:hover {
+.login-box input[type='submit']:hover {
   background: #0394f4;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 3px #0394f4,
+    0 0 5px #0394f4,
     0 0 15px #0394f4,
-    0 0 30px #0394f4,
-    0 0 50px #0394f4;
+    0 0 30px #0394f4;
 }
 
-.login-box a span {
+/*
+.login-box input[type='submit'] span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+input[type='submit'] span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -165,7 +185,7 @@ input:-internal-autofill-selected {
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box input[type='submit'] span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -186,7 +206,7 @@ input:-internal-autofill-selected {
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box input[type='submit'] span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -207,7 +227,7 @@ input:-internal-autofill-selected {
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box input[type='submit'] span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -227,3 +247,4 @@ input:-internal-autofill-selected {
     bottom: 100%;
   }
 }
+*/
