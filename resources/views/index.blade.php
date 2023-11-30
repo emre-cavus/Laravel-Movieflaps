@@ -1,21 +1,3 @@
-<?php /* 
-Blade::include('/config/database.php'); 
-*/
-?>
-<?php
-/*
-try { 
-    if(DB::connection()->getPdo()) 
-    { 
-        echo "Successfully connected to the database => " 
-                .DB::connection()->getDatabaseName(); 
-    } 
-} 
-catch (Exception $e) { 
-    echo "Unable to connect"; 
-} 
-*/
-?> 
 <html lang="en">
 
 <head>
@@ -35,6 +17,9 @@ catch (Exception $e) {
   <title>Movieflaps</title>
 </head>
 <body id="body" class="dark-mode">
+
+@extends('layout')
+@section('content')
   <script src="/js/main.js"></script>
   <!--  MENU -->
 <nav role="navigation">
@@ -84,9 +69,7 @@ catch (Exception $e) {
           </div>
         </div>
       </aside>
-<?php 
 
-?>
       <form action="/config/database.php" method="POST" enctype="multipart/form-data">
 <!-- MOVİES -->
   <section>
@@ -154,5 +137,6 @@ catch (Exception $e) {
         </div>
       </div>
 </footer>
+@stop
     </body>
 </html>

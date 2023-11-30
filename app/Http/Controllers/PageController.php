@@ -34,5 +34,8 @@ class PageController extends Controller
     function admin() {
         return view('admin-login');
     }
+    function dbconn() {
+        return view('dbconn');
+    }
 
 }

@@ -361,18 +361,6 @@ section {
   color: var(--text-color-tab);
 }
 
-@media (max-width: 900px) {
-  section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  section {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 
 
 /* ASİDE MENU */
@@ -705,4 +693,51 @@ table {
 
 .login-popup .login-popup__form .form-body .welcoming-section {
   color: #777;
+}
+
+
+@media (max-width: 900px) {
+  .aside-menu {
+    display: none;
+  }
+
+  #menuToggle {
+    left: 0px;
+  }
+
+  .site-footer {
+    bottom: 0;
+    position: relative;
+  }
+
+  .section {
+    grid-template-columns: repeat(0, 1fr)
+  }
+
+  .head {
+    display: none;
+  }
+
+  .wrap {
+    position: relative;
+  }
+
+  #menuToggle input {
+    left: -10px;
+  }
+
+  #menuToggle {
+    left: 30px;
+  }
+
+  #menu li {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  #menu {
+    width: 200px;
+    height: auto;
+    padding: 5px;
+  }
 }
